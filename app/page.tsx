@@ -3,7 +3,6 @@
 import { useState, useRef, useEffect } from 'react';
 import dynamic from 'next/dynamic';
 import styles from './styles/AudioPlayer.module.css';
-import { FaDownload } from 'react-icons/fa';
 
 const FaMicrophone = dynamic(() => import('react-icons/fa').then(mod => mod.FaMicrophone), { ssr: false });
 const FaSpinner = dynamic(() => import('react-icons/fa').then(mod => mod.FaSpinner), { ssr: false });
@@ -13,6 +12,7 @@ const FaBackward = dynamic(() => import('react-icons/fa').then(mod => mod.FaBack
 const FaForward = dynamic(() => import('react-icons/fa').then(mod => mod.FaForward), { ssr: false });
 const FaVolumeUp = dynamic(() => import('react-icons/fa').then(mod => mod.FaVolumeUp), { ssr: false });
 const FaVolumeMute = dynamic(() => import('react-icons/fa').then(mod => mod.FaVolumeMute), { ssr: false });
+const FaDownload = dynamic(() => import('react-icons/fa').then(mod => mod.FaDownload), { ssr: false });
 
 export default function Home() {
   const [article, setArticle] = useState('');
