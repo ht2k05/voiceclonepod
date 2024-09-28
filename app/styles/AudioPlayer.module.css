@@ -1,0 +1,162 @@
+.audioPlayer {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.controlButton, .playPauseButton, .iconButton {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.controlButton:hover, .playPauseButton:hover, .iconButton:hover {
+  transform: scale(1.1);
+}
+
+.playPauseButton {
+  font-size: 2rem;
+  margin: 0 20px;
+}
+
+.controlButton {
+  font-size: 1.2rem;
+}
+
+.buttonLabel {
+  font-size: 0.8rem;
+  margin-top: 5px;
+}
+
+.progressContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.timeLabel {
+  color: white;
+  font-size: 0.8rem;
+  width: 45px;
+  text-align: center;
+}
+
+.seekBar {
+  flex-grow: 1;
+  margin: 0 10px;
+  -webkit-appearance: none;
+  background: rgba(255, 255, 255, 0.2);
+  outline: none;
+  border-radius: 15px;
+  overflow: hidden;
+  height: 8px;
+}
+
+.seekBar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+  box-shadow: -100vw 0 0 100vw rgba(255, 255, 255, 0.4);
+}
+
+.bottomControls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.volumeControl, .playbackRateControl {
+  flex: 1;
+  min-width: 120px;
+}
+
+.volumeControl {
+  display: flex;
+  align-items: center;
+}
+
+.volumeBar {
+  width: 80px;
+  -webkit-appearance: none;
+  background: rgba(255, 255, 255, 0.2);
+  outline: none;
+  border-radius: 15px;
+  overflow: hidden;
+  height: 6px;
+  margin-left: 10px;
+}
+
+.volumeBar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+  box-shadow: -100vw 0 0 100vw rgba(255, 255, 255, 0.4);
+}
+
+.playbackRateControl {
+  display: flex;
+  align-items: center;
+}
+
+.rateButton {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  margin-left: 5px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.rateButton:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.activeRate {
+  background: rgba(255, 255, 255, 0.4);
+  font-weight: bold;
+}
+
+.downloadButton {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.downloadButton:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+
+.downloadButton svg {
+  margin-right: 5px;
+}
