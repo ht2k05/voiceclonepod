@@ -96,15 +96,8 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: 'Error concatenating audio files', details: error instanceof Error ? error.message : 'Unknown error' }, { status: 500 });
     }
 
-    console.log('Uploading to Google Cloud Storage...');
-    let publicUrl;
-    try {
-      publicUrl = await uploadToGoogleCloudStorage(mergedFileName);
-      console.log('Public URL:', publicUrl);
-    } catch (error) {
-      console.error('Error uploading to Google Cloud Storage:', error);
-      return NextResponse.json({ error: 'Error uploading podcast', details: error instanceof Error ? error.message : 'Unknown error' }, { status: 500 });
-    }
+    // The merged file is already in Google Cloud Storage, so we don't need to upload it again
+    const publicUrl = `https://storage.googleapis.com/${process.env.GOOGLE_CLOUD_STORAGE_BUCKET}/${mergedFileName}`;
 
     // Verify the file exists and is accessible
     try {
